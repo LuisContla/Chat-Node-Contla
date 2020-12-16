@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <title>Chat Node</title>
+</head>
+
+<body>
+    <!-- Esto está comentado porque al entrar a la página no sirve el botón, -->
+    <!-- quita el coetario para que veas a lo que me refiero -->
+
+    <div class="loader">
+        <p>Necesitas conectarte para ver el chat</p>
+        &nbsp;
+      <button type="button" onclick="conectarChat()">Conectarse</button>
+    </div>
+    <div class="main-container">
+        <div class="text-container">
+            <div class="mensajes-container">
+            </div>
+            <div class="input-chat">
+                <input type="text" id="input" placeholder="Mensaje..." onkeypress="enviarMensaje(event)">
+                <button id="button" onclick="enviarMensajeClick()">Enviar</button>
+            </div>
+        </div>
+        <div class="user-list">
+            <h3>Lista de usuarios:</h3>
+            <hr class="divider">
+            <ol id="lista-users"></ol>
+        </div>
+    </div>
+    <script src="/js/jq.js" charset="utf-8"></script>
+    <script src="/js/socket.io.js"></script>
+    <script src="/js/logica.js" charset="utf-8"></script>
+
+</body>
+
+</html>
