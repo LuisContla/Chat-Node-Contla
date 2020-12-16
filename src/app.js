@@ -6,7 +6,7 @@ var io = require('socket.io')(server);
 
 var clientes = [];
 
-var PORT = normalizePort(process.env.PORT || '81');
+var PORT = process.env.PORT || 81;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
